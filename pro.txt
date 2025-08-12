@@ -1,0 +1,23 @@
+1️⃣ Install Django (if not already installed)
+pip install django
+2️⃣ Create the Django project
+Replace myproject with your desired project name:
+django-admin startproject myproject
+3️⃣ Move into the project folder
+cd myproject
+4️⃣ Create an app inside the project
+Replace mainapp with the app name you want:
+python manage.py startapp mainapp
+5️⃣ Run the development server (local)
+python manage.py runserver
+6️⃣ Run the server on your local network (so another PC can access it)
+First, find your local IP address:
+
+Windows: ipconfig (look for IPv4 Address)
+
+Linux/Mac: ifconfig or ip addr show
+Then run:
+python manage.py runserver 0.0.0.0:8000
+Now other devices on the same network can open:
+http://YOUR_LOCAL_IP:8000
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Malicious Host{% endblock %}
+{% block content %}
+<h2 class="text-danger">Malicious Host — Demo</h2>
+<p>This page simulates an attacker-controlled host used during the DNS hijack step.</p>
+
+<div class="card">
+  <div class="card-body">
+    <h5>Open Redirect (intentionally vulnerable)</h5>
+    <p>Enter a URL and this page will redirect there without validation — <strong>vulnerable by design</strong>.</p>
+
+    <!-- vulnerable form that simply GETs the redirect endpoint -->
+    <form action="{% url 'open_redirect' %}" method="get" class="row g-2">
+      <div class="col-md-9">
+        <input name="url" class="form-control" placeholder="https://example.com" />
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-danger w-100" type="submit">Redirect</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<p class="mt-3"><small class="text-muted">Use this to craft an open-redirect link like: <code>/malicious/redirect?url=/adminportal/escalate?make_admin=1&user=alice</code></small></p>
+{% endblock %}

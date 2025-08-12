@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Project1 Demo{% endblock %}
+{% block content %}
+<h2>Project One — Demo</h2>
+<p>This is a demo project belonging to the portfolio. In a live simulation this subdomain may be hijacked.</p>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Interactive demo</h5>
+    <p class="card-text">Try the demo login (local users) or follow the demo link to the malicious host.</p>
+    <a class="btn btn-outline-primary" href="{% url 'project1_login' %}">Demo Login</a>
+    <!-- Simulated "project link" that an attacker might hijack -->
+    <a class="btn btn-outline-danger" href="/malicious/">Open project (should be project1) — (simulate hijack)</a>
+  </div>
+</div>
+
+<p><small class="text-muted">Note: The red link above simulates the DNS hijack redirect for training.</small></p>
+{% endblock %}

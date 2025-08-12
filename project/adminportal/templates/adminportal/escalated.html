@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Escalated{% endblock %}
+{% block content %}
+<h3>Privilege Escalation Result</h3>
+
+{% if user %}
+  <div class="alert alert-success">
+    User <strong>{{ user.username }}</strong> has been marked as <em>is_staff</em> (admin) for demo.
+  </div>
+  <p>Now log in as that user to see admin controls in <a href="{% url 'admin_home' %}">Admin Portal</a>.</p>
+{% else %}
+  <div class="alert alert-danger">No user found or nothing changed.</div>
+{% endif %}
+{% endblock %}

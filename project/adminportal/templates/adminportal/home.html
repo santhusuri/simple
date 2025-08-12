@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Admin Portal{% endblock %}
+{% block content %}
+<h2>Admin Portal</h2>
+
+{% if user.is_authenticated and user.is_staff %}
+  <div class="alert alert-success">Welcome, admin {{ user.username }} — you see admin controls.</div>
+  <h4>Admin Actions</h4>
+  <ul>
+    <li><a href="#">Manage users</a></li>
+    <li><a href="#">View logs</a></li>
+    <li><a href="#">Trigger ransomware simulation</a></li>
+  </ul>
+{% else %}
+  <div class="alert alert-warning">You are not an admin. Log in with an admin account to view controls.</div>
+  <p><a href="/admin/login/">Django Admin Login</a> (for lab: create users via django admin)</p>
+{% endif %}
+{% endblock %}

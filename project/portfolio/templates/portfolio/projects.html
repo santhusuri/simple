@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Projects — Santhu Portfolio{% endblock %}
+{% block content %}
+<h2>Projects</h2>
+<p>Click a project to open its demo.</p>
+
+<div class="list-group">
+  <!-- using local paths (works without hosts file); when using hosts, change to full subdomain links -->
+  <a class="list-group-item list-group-item-action" href="{% url 'project1_home' %}">Project One — Interactive Demo (project1)</a>
+  <a class="list-group-item list-group-item-action" href="/malicious/">Malicious Redirect Host (malicious)</a>
+  <a class="list-group-item list-group-item-action" href="/adminportal/">Admin Portal</a>
+</div>
+{% endblock %}

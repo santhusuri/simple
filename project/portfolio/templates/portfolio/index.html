@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+    <h1>Santhu Suri</h1>
+    <p class="lead">Full-stack / Security researcher — demo portfolio for security training.</p>
+
+    <h3>Featured Projects</h3>
+    <ul>
+      <li><a href="{% url 'project1_home' %}">Project One — Interactive Demo</a></li>
+      <li><a href="/malicious/">Security Demo (malicious host)</a></li>
+      <li><a href="/adminportal/">Admin Portal (lab)</a></li>
+    </ul>
+
+    <p>Use these links during the simulation to demonstrate DNS hijack → open redirect → privilege escalation.</p>
+  </div>
+
+  <div class="col-md-4">
+    <h5>Quick Links</h5>
+    <ul>
+      <li><a href="{% url 'projects' %}">All projects</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

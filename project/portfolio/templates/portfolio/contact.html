@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Contact — Santhu Portfolio{% endblock %}
+{% block content %}
+<h2>Contact</h2>
+<p>For lab assistance: use local accounts only. Don’t send real credentials.</p>
+
+<form method="post">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input class="form-control" name="name" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Message</label>
+    <textarea class="form-control" name="message"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Send</button>
+</form>
+{% endblock %}

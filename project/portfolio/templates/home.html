@@ -1,0 +1,95 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home - Santhu Suri Portfolio{% endblock %}
+
+{% block content %}
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    
+    <h1 class="text-5xl font-bold mb-2">Santhu Suri</h1>
+    <p class="text-xl text-indigo-600 font-semibold mb-4">Cybersecurity Enthusiast & Full Stack Developer</p>
+    <p class="max-w-xl mb-8 text-gray-600">
+      Passionate about building secure and scalable applications, with expertise in Python, Django, and ethical hacking.
+    </p>
+    <div class="space-x-4">
+      <a href="{% url 'projects' %}" class="bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition">View My Work</a>
+      </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-white py-12 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-8">Skills & Technologies</h2>
+    <div class="max-w-4xl mx-auto grid grid-cols-3 sm:grid-cols-6 gap-6 text-center">
+      <div class="p-4 bg-indigo-50 rounded">Python</div>
+      <div class="p-4 bg-indigo-50 rounded">Django</div>
+      <div class="p-4 bg-indigo-50 rounded">Tailwind CSS</div>
+      <div class="p-4 bg-indigo-50 rounded">Linux</div>
+      <div class="p-4 bg-indigo-50 rounded">Penetration Testing</div>
+      <div class="p-4 bg-indigo-50 rounded">Docker</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-12 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-8">Featured Projects</h2>
+    <div class="max-w-5xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+    
+        <h3 class="text-xl font-semibold mb-2">VulnLabX - Vulnerable Web App</h3>
+        <p class="text-gray-600 mb-4">
+          A full-stack vulnerable application designed for security training, including XSS, SQLi, and command injection.
+        </p>
+        
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        
+        <h3 class="text-xl font-semibold mb-2">USB IDS/IPS System</h3>
+        <p class="text-gray-600 mb-4">
+          A Raspberry Pi-based USB Intrusion Detection System to detect and block malicious USB devices automatically.
+        </p>
+       
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+
+        <h3 class="text-xl font-semibold mb-2">Secure Network Auditor</h3>
+        <p class="text-gray-600 mb-4">
+          A Python-based tool to audit network configurations and detect vulnerabilities automatically.
+        </p>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-12 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-8">About Me</h2>
+    <div class="max-w-3xl mx-auto text-center text-gray-700">
+      <p>
+        I’m a cybersecurity enthusiast and software developer with a passion for learning and sharing knowledge. I specialize in building secure web applications and exploring offensive security techniques.
+      </p>
+      <p class="mt-4">
+        I enjoy solving complex problems, collaborating with teams, and continuously improving my skills through real-world projects and challenges.
+      </p>
+      <a href="{% url 'about' %}" class="inline-block mt-6 px-6 py-3 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">Read More</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-indigo-600 py-12 px-6 text-white">
+    <h2 class="text-3xl font-semibold text-center mb-8">Get In Touch</h2>
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="mb-4">Feel free to reach out to discuss projects, collaborations, or just say hi!</p>
+      <p class="font-mono mb-6">Email: <a href="mailto:santhu@example.com" class="underline">santhu@example.com</a></p>
+      <div class="flex justify-center space-x-6 text-2xl">
+        <a href="https://github.com/santhusuri" target="_blank" aria-label="GitHub" class="hover:text-gray-300">🐱</a>
+        <a href="https://linkedin.com/in/santhusuri" target="_blank" aria-label="LinkedIn" class="hover:text-gray-300">🔗</a>
+        <a href="https://twitter.com/santhusuri" target="_blank" aria-label="Twitter" class="hover:text-gray-300">🐦</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
